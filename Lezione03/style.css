@@ -1,0 +1,17 @@
+#output, #partite, #media {
+    width: 150px;
+    height: 150px;
+    border: 1px solid red;
+    text-align: center;
+    padding: 10px;
+    font-size: 8em;
+    color: red;
+    margin-bottom: 2px;
+    float: left; 
+}
+#dadi{clear: left;}
+#dado1, #dado2 {
+    width:100px;
+    height: 100px;
+    border: 1px solid black;
+}
