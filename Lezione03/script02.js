@@ -34,7 +34,7 @@ BtnPlay.onclick = function () {
         display()
     }
     media = counter / partite;
-    OUT_MEDIA.textContent = media
+    OUT_MEDIA.textContent = (media.toFixed(2) * 100) + '%' 
 
     
     console.log(IMG1);
