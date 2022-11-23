@@ -29,3 +29,7 @@ TENDINA.onchange = function(e){
 document.body.appendChild(TENDINA)
 document.body.appendChild(INPUT)
 document.body.appendChild(BTN)
+
+document.body.onload = function () {
+    coloraSfondo()
+}
