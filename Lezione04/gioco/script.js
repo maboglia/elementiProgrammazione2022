@@ -29,9 +29,9 @@ for (const simbolo of SIMBOLI) {
 
 function print(user, pc) {
     console.log("user " + user +", pc " + pc);
-    console.log("partite " + partite)
-    console.log("vittorie user " + vittorieUSER)
-    console.log("vittorie PC "  + vittoriePC)
+    console.log("partite " + partite)    
+    console.log("vittorie user " + vittorieUSER);
+    console.log("vittorie PC "  + vittoriePC);
 }
 
 function scegliSimboloPC() {
