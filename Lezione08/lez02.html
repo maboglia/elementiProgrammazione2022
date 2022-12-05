@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="num1" >
+    <input type="number" id="num2" >
+    <button id="btnCalcola">calcola</button>
+
+    <script>
+        let num1 = parseInt(document.getElementById('num1').value)
+        let num2 = parseInt(document.getElementById('num2').value)
+
+        document.getElementById('btnCalcola').onclick = function () {
+            calcola(num1, num2)
+        }
+
+        function calcola(a, b) {
+            console.log('funziona');
+            return a*b;
+        }
+
+
+        
+
+
+    </script>
+
+
+
+
+</body>
+</html>

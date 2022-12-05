@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        function mediaVoti(...voti) {
+            let totale = 0;
+
+            for (let i = 0; i < voti.length; i++) {
+                if (typeof voti[i] === 'number')
+                    totale += voti[i]
+            }
+
+            return totale/voti.length
+        }
+
+        console.log(mediaVoti(24,25));
+        console.log(mediaVoti(24,25,28));
+        console.log(mediaVoti(24,25, 28, [25, 24] ,30));
+
+
+    </script>
+</body>
+</html>
