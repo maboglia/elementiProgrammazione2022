@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <style>
+        .container {width: 80%; margin: 0 auto;display: flex;justify-content: space-between;}
+        #sinistra {width:25%; border-right: 1px solid #ccc;}
+        #destra {width:75%; }
+        h1 {font-family: 'Rubik Vinyl', serif;
+        font-size: 48px;}
+        h2 {font-family: 'Tangerine'}
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div id="sinistra"></div>
+        <div id="destra"></div>
+    </div>
+
+<script>
+    const URL = 'https://dummyjson.com/quotes'
+    fetch(URL)
+        .then(res => res.json())
+        .then(res => {
+            const citazioni = res.quotes;
+            const UL = document.createElement('ul');
+            for (const frase of citazioni) {
+                
+                const LI = document.createElement('li')
+                LI.textContent = frase.author 
+                console.log(frase.author);
+
+                LI.addEventListener('click', () => {
+                    const H1 = document.createElement('h1')
+                    H1.textContent = frase.quote
+                    const H2 = document.createElement('h2')
+                    H2.textContent = frase.author
+                    if (document.getElementById('destra').hasChildNodes()){
+                        document.getElementById('destra').removeChild(document.getElementById('destra').childNodes[0])
+                        document.getElementById('destra').removeChild(document.getElementById('destra').childNodes[0])
+                    }
+                    document.getElementById('destra').append(H1, H2)
+                })
+
+                UL.append(LI)
+            }
+
+            document.getElementById('sinistra').append(UL)
+
+        })
+
+
+</script>
+
+</body>
+</html>

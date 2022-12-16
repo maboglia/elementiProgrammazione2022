@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .titolo { color:purple; font-size: 1.2em; font-weight: bold;}
+
+    </style>
+    
+</head>
+<body>
+    
+    <h1>Prova jquery</h1>
+
+    <ul>
+        <li>selettori</li>
+        <li>metodi</li>
+    </ul>
+
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, voluptatibus asperiores necessitatibus quae id animi quasi omnis ex libero in, voluptate provident? Cumque ratione fugiat minus alias veniam in rem.</p>
+    <p id="secondo">pippo è <b>molto</b> simpatico</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/2560px-JQuery-Logo.svg.png" alt="" id="foto">
+    <button id="btnTest">Schiacciami</button>
+    
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+
+    $("p").css("font-size", "3em")
+
+    
+    $('p:last').addClass('titolo')
+
+    $('p:last').click(function () {
+        $("p:first").text("<strong>paperino è bello</strong>");
+    })
+
+    $('#btnTest').click(function () {
+        
+        $('img#foto').toggle(2500, function () {
+            alert('effetto terminato')
+        })
+
+
+    })
+
+</script>
+
+</body>
+</html>
